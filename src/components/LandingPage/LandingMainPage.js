@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Skeleton } from "antd";
 
-const LandingMainPage = ({userDetails}) => {
+const LandingMainPage = ({ userDetails }) => {
   const [tab, setTab] = useState(0);
   console.log(userDetails);
   const [stories, setStories] = useState();
@@ -112,7 +112,7 @@ const LandingMainPage = ({userDetails}) => {
               })}
 
               {stories?.map((data) => (
-                <LandingRecommendedPost userDetails = {userDetails} key={data?._id} data={data} />
+                <LandingRecommendedPost userDetails={userDetails} key={data?._id} data={data} />
               ))}
 
               {/* <LandingRecommendedPost />
@@ -151,7 +151,7 @@ const LandingMainPage = ({userDetails}) => {
               );
             })}
 
-            
+
             {/* <WhoToFollow />
             <WhoToFollow />
             <WhoToFollow />
